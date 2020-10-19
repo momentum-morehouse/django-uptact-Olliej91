@@ -16,3 +16,10 @@ class ContactForm(forms.ModelForm):
             'phone_number',
             'email',
         ]
+
+        class NoteForm(forms.ModelForm):
+            class Meta:
+                model = Note 
+                fields = [
+                    'text',
+                ]
