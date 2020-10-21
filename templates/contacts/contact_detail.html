@@ -7,4 +7,12 @@
 {{note}}
 {% endfor %}
 
+<form action="{% url 'add_note' pk=contact.pk %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div>
+      <button type="submit">Add Note</button>
+    </div>
+  </form>
+
 {% endblock %}
